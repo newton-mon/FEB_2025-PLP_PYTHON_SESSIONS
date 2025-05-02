@@ -40,7 +40,7 @@ class Skyscraper(Building):
         else:
             raise ValueError("Helipad status must be a boolean.")
 
-# Example usage
+# Example
 b1 = Building("Nairobi", 3, "Residential")
 print(b1.describe())
 print(b1.renovate("Commercial"))
@@ -57,36 +57,36 @@ Create a program that includes animals or vehicles with the same action (like mo
 However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() 
 prints "Flying" ✈️).'''
 
-# Base class
+# Parent class
 class Vehicle:
     def move(self):
-        raise NotImplementedError("Each vehicle must implement its own move method.")
+        pass
 
 # Subclass: Car
 class Car(Vehicle):
     def move(self):
-        print("🚗 Driving on the road...")
+        print("Driving on the road...")
 
 # Subclass: Plane
 class Plane(Vehicle):
     def move(self):
-        print("✈️ Flying through the sky...")
+        print(" Flying through the sky...")
 
 # Subclass: Boat
 class Boat(Vehicle):
     def move(self):
-        print("🛥️ Sailing on the water...")
+        print(" Sailing on the water...")
 
 # Subclass: Train
 class Train(Vehicle):
     def move(self):
-        print("🚆 Running on the tracks...")
+        print(" Running on the tracks...")
 
 # Function to demonstrate polymorphism
 def show_movement(vehicles):
     for v in vehicles:
         v.move()
 
-# Example usage
+# Example 
 vehicles = [Car(), Plane(), Boat(), Train()]
 show_movement(vehicles)
